@@ -1,6 +1,6 @@
 package Figures;
 
-public class Rectangle extends Figure {
+public class Rectangle  {
     private Point p1;
     private Point p2;
     private Point p3;
@@ -38,15 +38,12 @@ public class Rectangle extends Figure {
         return p4;
     }
 
-    @Override
     public String toString() {
         return "Rectangle{" + "p1=" + p1 + ", p2=" + p2 + ", p3=" + p3 + ", p4=" + p4 + '}';
     }
-    @Override
     public double getPerimeter() {
         return a + b + c + d;
     }
-    @Override
     public double getArea(){
         double p = this.getPerimeter()/2;
         return Math.sqrt(p*(p-this.a)*(p-this.b)*(p-this.c)*(p-this.d));

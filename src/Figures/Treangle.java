@@ -1,6 +1,6 @@
 package Figures;
 
-public class Treangle extends Figure {
+public class Treangle {
     private Point p1;
     private Point p2;
     private Point p3;

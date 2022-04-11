@@ -1,9 +1,9 @@
 package oop;
 
+import Figures.*;
 import Figures.Figure;
-import Figures.Point;
-import Figures.Rectangle;
-import Figures.Treangle;
+
+import java.util.ArrayList;
 
 public class Main {
 
@@ -13,6 +13,11 @@ public class Main {
         Point p2 = new Point(2, 1);
         Point p3 = new Point(2, 2);
         Point p4 = new Point(1, 2);
+        ArrayList<Point> points = new ArrayList<>();
+        points.add(p1);
+        points.add(p2);
+        points.add(p3);
+        points.add(p4);
         Rectangle r  = new Rectangle(p1,p2,p3,p4);
         Treangle t = new Treangle(p1,p2,p3);
         System.out.println(r);
@@ -21,7 +26,9 @@ public class Main {
         System.out.println("Периметр треугольника: "+t.getPerimeter());
         System.out.println("Площадь прямоугольника: "+r.getArea());
         System.out.println("Площадь треугольника: "+t.getArea());
-        Figure f1 = new Treangle(p1,p2,p3);
-        Figure f2 = new Rectangle(p1,p2,p3,p4);
+        Figure f3 = new Polygon(points);
+        System.out.println("Выпод полигона: "+f3.toString());
+        System.out.println("Периметр полигона: "+f3.getPerimeter());
+        System.out.println("Площадь полигона: "+f3.getArea());
     }
 }
