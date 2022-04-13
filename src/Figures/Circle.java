@@ -3,14 +3,14 @@ package Figures;
 import java.util.ArrayList;
 
 public class Circle extends Figure {
-    private Double radius;
+    private Double radius;                              //радиус
 
     public Circle(ArrayList<Point> points) {
         super(points);
         setRadius();
         setPerimeter();
         setArea();
-    }
+    }        //конструктор
 
     private void setPerimeter() {
         this.perimeter = 2*Math.PI*this.radius;
