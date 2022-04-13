@@ -6,7 +6,7 @@ import Figures.Point;
 
 import java.util.ArrayList;
 
-public class CircleCreator implements iFigureCreater  {
+public class CircleCreator implements iFigureCreator  {
 
     @Override
     public Figure CreateFigure(ArrayList<Point> points) {

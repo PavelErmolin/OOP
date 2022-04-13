@@ -6,7 +6,7 @@ import Figures.Polygon;
 
 import java.util.ArrayList;
 
-public class PoligonCreator implements iFigureCreater {
+public class PoligonCreator implements iFigureCreator {
 
     @Override
     public Figure CreateFigure(ArrayList<Point> points) {

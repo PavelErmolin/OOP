@@ -4,21 +4,20 @@ import java.util.ArrayList;
 
 public class Polygon extends Figure {
     private ArrayList<Double> sides;                        // Список сторон
-    private double perimeter;
-    private double area;
+
     public Polygon(ArrayList<Point> points) {
         super(points);
         this.sides = new ArrayList<>();
         setSides();
         setPerimeter();
         serArea();
-    }
+    }           // Конструктор
     public ArrayList<Point> getPoints() {
         return points;
     }
     @Override
     public String toString() {
-        return "Polygon {" + "points=" + points + '}';
+        return "Polygon " + points;
     }
 
     private void setSides() {
@@ -33,10 +32,6 @@ public class Polygon extends Figure {
         for (int i = 0; i < this.sides.size(); i++)
             this.perimeter += this.sides.get(i);
     }
-    @Override
-    public double getPerimeter() {
-        return perimeter;
-    }
 
     private void serArea(){
         double p = this.perimeter / 2;
@@ -46,8 +41,4 @@ public class Polygon extends Figure {
         this.area = Math.sqrt(rez);
     }
 
-    @Override
-    public double getArea(){
-        return  this.area;
-    }
 }
