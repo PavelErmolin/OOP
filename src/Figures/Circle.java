@@ -1,8 +1,10 @@
 package Figures;
 
+import Figures.Trasform.ITransformable;
+
 import java.util.ArrayList;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements ITransformable {
     private Double radius;                              //радиус
 
     public Circle(ArrayList<Point> points) {
@@ -30,6 +32,24 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Circle center " + this.points.get(0).toString() + ", radius=" + this.radius + '}';
+        return "\nВывод круга: " + this.points.get(0).toString() + ", radius=" + this.radius + '}' +
+                "\nДлинна окружности: "+this.getPerimeter() +
+                "\nПлощадь круга: "+this.getArea() +
+                "\n----------------------------------------------";
+    }
+
+    @Override
+    public void Rotate(int degrees) {
+
+    }
+
+    @Override
+    public void Scale(int x) {
+
+    }
+
+    @Override
+    public void Transfer(int x,int y) {
+
     }
 }

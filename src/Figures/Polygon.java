@@ -1,8 +1,10 @@
 package Figures;
 
+import Figures.Trasform.ITransformable;
+
 import java.util.ArrayList;
 
-public class Polygon extends Figure {
+public class Polygon extends Figure implements ITransformable {
     private ArrayList<Double> sides;                        // Список сторон
 
     public Polygon(ArrayList<Point> points) {
@@ -17,7 +19,10 @@ public class Polygon extends Figure {
     }
     @Override
     public String toString() {
-        return "Polygon " + points;
+        return "\nВывод полигона: " + this.points +
+                "\nПериметр полигона: " + this.getPerimeter() +
+                "\nПлощадь полигона: " + this.getArea() +
+                "\n----------------------------------------------";
     }
 
     private void setSides() {
@@ -41,4 +46,18 @@ public class Polygon extends Figure {
         this.area = Math.sqrt(rez);
     }
 
+    @Override
+    public void Rotate(int degrees) {
+
+    }
+
+    @Override
+    public void Scale(int x) {
+
+    }
+
+    @Override
+    public void Transfer(int x, int y) {
+
+    }
 }

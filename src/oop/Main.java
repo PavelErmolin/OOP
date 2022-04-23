@@ -39,13 +39,16 @@ public class Main {
         */
         FigureCreator figureCreator = new FigureCreator();
         Figure four_points_figure = figureCreator.Create(four_points);
-        System.out.println("Вывод полигона: "+four_points_figure.toString());
-        System.out.println("Периметр полигона: "+four_points_figure.getPerimeter());
-        System.out.println("Площадь полигона: "+four_points_figure.getArea());
         Figure two_points_figure = figureCreator.Create(two_points);
-        System.out.println("Вывод круга: "+two_points_figure.toString());
-        System.out.println("Длинна окружности: "+two_points_figure.getPerimeter());
-        System.out.println("Площадь круга: "+two_points_figure.getArea());
+        ArrayList<Figure> figures = new ArrayList<>();
+        figures.add(four_points_figure);
+        figures.add(two_points_figure);
+        System.out.println(figures);
+        Save_in_file save_in_file= new Save_in_file();
+        save_in_file.Save(figures);
+        Read_from_a_file read_from_a_file = new Read_from_a_file();
+        ArrayList<Figure> new_figures = read_from_a_file.Read();
+        System.out.println(new_figures);
 
     }
 }

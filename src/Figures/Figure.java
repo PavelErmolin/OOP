@@ -1,8 +1,9 @@
 package Figures;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public abstract class Figure {
+public abstract class Figure implements Serializable {
     protected ArrayList<Point> points;
     protected double perimeter;
     protected double area;
@@ -12,11 +13,16 @@ public abstract class Figure {
     }
 
     public abstract String toString();
+    {
+
+    }
 
     public double getPerimeter() {
         return perimeter;
     }
+
     public double getArea(){
         return area;
     }
+
 }
