@@ -1,4 +1,6 @@
-package Figures;
+package Figures.OLD;
+
+import Figures.Point;
 
 public class Treangle {
     private Point p1;
